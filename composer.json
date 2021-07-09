@@ -28,7 +28,7 @@
     "extra":{
       "laravel":{
          "providers":[
-            "zuhaili92\\DBCart\\CartServiceProvider"
+            "src\\zuhaili92\\DBCart\\CartServiceProvider"
          ]
       }
    }
