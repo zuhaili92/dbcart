@@ -1,4 +1,4 @@
-# DBCart  [![Build Status](https://travis-ci.org/hassansin/dbcart.svg?branch=master)](https://travis-ci.org/hassansin/dbcart)  [![SensioLabsInsight](https://insight.sensiolabs.com/projects/97876df8-6a51-4da1-92f3-14ebe544c4d9/mini.png?v=1)](https://insight.sensiolabs.com/projects/97876df8-6a51-4da1-92f3-14ebe544c4d9)  [![codecov](https://codecov.io/gh/hassansin/dbcart/branch/master/graph/badge.svg)](https://codecov.io/gh/hassansin/dbcart)
+# DBCart  [![Build Status](https://travis-ci.org/zuhaili92/dbcart.svg?branch=master)](https://travis-ci.org/zuhaili92/dbcart)  [![SensioLabsInsight](https://insight.sensiolabs.com/projects/97876df8-6a51-4da1-92f3-14ebe544c4d9/mini.png?v=1)](https://insight.sensiolabs.com/projects/97876df8-6a51-4da1-92f3-14ebe544c4d9)  [![codecov](https://codecov.io/gh/zuhaili92/dbcart/branch/master/graph/badge.svg)](https://codecov.io/gh/zuhaili92/dbcart)
 
 Shopping Cart library for Laravel 5 that uses database instead of sessions to store carts.
 
@@ -16,11 +16,11 @@ Shopping Cart library for Laravel 5 that uses database instead of sessions to st
 
 ## Installation
 
-1. Edit your project's composer.json file to require hassansin/DBCart.
+1. Edit your project's composer.json file to require zuhaili92/DBCart.
 
     ```js
     "require": {
-        "hassansin/dbcart": "dev-master"
+        "zuhaili92/dbcart": "dev-master"
     }
     ```
 
@@ -33,7 +33,7 @@ Shopping Cart library for Laravel 5 that uses database instead of sessions to st
     ```php
     'providers' => [
         //...
-        Hassansin\DBCart\CartServiceProvider::class,
+        zuhaili92\DBCart\CartServiceProvider::class,
         //...
     ],
     ```
@@ -41,7 +41,7 @@ Shopping Cart library for Laravel 5 that uses database instead of sessions to st
 4. Then, publish database migrations and run migration:
 
     ```sh
-    php artisan vendor:publish --provider="Hassansin\DBCart\CartServiceProvider" --tag=migrations
+    php artisan vendor:publish --provider="zuhaili92\DBCart\CartServiceProvider" --tag=migrations
     php artisan migrate
     ```
 
@@ -50,7 +50,7 @@ Shopping Cart library for Laravel 5 that uses database instead of sessions to st
 Optionally, you can publish package config file:
 
 ```sh
-php artisan vendor:publish --provider="Hassansin\DBCart\CartServiceProvider" --tag=config
+php artisan vendor:publish --provider="zuhaili92\DBCart\CartServiceProvider" --tag=config
 ```
 Now, update `config/cart.php` if required 
 
@@ -69,7 +69,7 @@ $cart = App::make('cart');
 alternatively, you can avoid singleton instance and use the model class to load the cart instance from database everytime:
 
 ```php
-use Hassansin\DBCart\Models\Cart;
+use zuhaili92\DBCart\Models\Cart;
 //...
 $cart = Cart::current();
 ```
@@ -179,7 +179,7 @@ Supports several cart statuses:
 * `completed`: completed carts 
 
 ```php
-use Hassansin\DBCart\Models\Cart;
+use zuhaili92\DBCart\Models\Cart;
 
 // get carts based on their status: active/expired/pending/complete
 $active_carts = Cart::active()->get();
@@ -199,7 +199,7 @@ $wishlist = app('cart', [ 'name' => 'wishlist']);
 or, without singleton carts:
 
 ```php
-use Hassansin\DBCart\Models\Cart;
+use zuhaili92\DBCart\Models\Cart;
 //...
 $cart = Cart::current();
 $sales_cart =  Cart::current('sales');
@@ -240,11 +240,11 @@ Set to `completed` status: `$cart->complete();`
 ## Extending Cart Model
 It's easy to extend DBCart. You can extend base DBCart model and add your own methods or columns. Follow these steps to extend the cart model:
 
-1. Create a model by extending `Hassansin\DBCart\Models\Cart`:
+1. Create a model by extending `zuhaili92\DBCart\Models\Cart`:
     ```php    
     namespace App;
         
-    use Hassansin\DBCart\Models\Cart as BaseCart;
+    use zuhaili92\DBCart\Models\Cart as BaseCart;
 
     class Cart extends BaseCart
     {
@@ -271,4 +271,4 @@ It's easy to extend DBCart. You can extend base DBCart model and add your own me
     $cart = App::make('cart');
     ```
 
-You can also follow the above steps and create your own `CartLine` model by extending `Hassansin\DBCart\Models\CartLine`. Be sure to update `config/cart.php` to reflect your changes.
+You can also follow the above steps and create your own `CartLine` model by extending `zuhaili92\DBCart\Models\CartLine`. Be sure to update `config/cart.php` to reflect your changes.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Hassansin\DBCart\Models;
+namespace zuhaili92\DBCart\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;

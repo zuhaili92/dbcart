@@ -1,6 +1,6 @@
 <?php
 
-namespace Hassansin\DBCart\Facades;
+namespace zuhaili92\DBCart\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

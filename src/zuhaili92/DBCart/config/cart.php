@@ -8,12 +8,12 @@ return [
     | Cart Model
     |--------------------------------------------------------------------------
     |
-    | If you extend the  Hassansin\DBCart\Models\Cart class then specify child
+    | If you extend the  zuhaili92\DBCart\Models\Cart class then specify child
     | class namespace here
     |
     */
 
-    'cart_model' => Hassansin\DBCart\Models\Cart::class,
+    'cart_model' => zuhaili92\DBCart\Models\Cart::class,
 
 
     /*
@@ -25,7 +25,7 @@ return [
     |
     */
 
-    'cart_line_model' => Hassansin\DBCart\Models\CartLine::class,
+    'cart_line_model' => zuhaili92\DBCart\Models\CartLine::class,
 
     /*
     |--------------------------------------------------------------------------

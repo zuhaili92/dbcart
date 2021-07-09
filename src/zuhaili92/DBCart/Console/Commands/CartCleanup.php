@@ -1,6 +1,6 @@
 <?php
 
-namespace Hassansin\DBCart\Console\Commands;
+namespace zuhaili92\DBCart\Console\Commands;
 
 use Illuminate\Console\Command;
 use Carbon\Carbon;

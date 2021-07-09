@@ -1,7 +1,7 @@
 <?php
 
-use Hassansin\DBCart\Models\Cart;
-use Hassansin\DBCart\Models\CartLine;
+use zuhaili92\DBCart\Models\Cart;
+use zuhaili92\DBCart\Models\CartLine;
 
 class CartTest extends Orchestra\Testbench\TestCase
 {
@@ -12,19 +12,19 @@ class CartTest extends Orchestra\Testbench\TestCase
         $this->loadLaravelMigrations(['--database' => 'testbench']);
         $this->loadMigrationsFrom([
             '--database' => 'testbench',
-            '--path' => realpath(__DIR__.'/../src/Hassansin/DBCart/database/migrations'),
+            '--path' => realpath(__DIR__.'/../src/zuhaili92/DBCart/database/migrations'),
         ]);
     }
 
     protected function getPackageProviders($app)
     {
-        return [Hassansin\DBCart\CartServiceProvider::class];
+        return [zuhaili92\DBCart\CartServiceProvider::class];
     }
 
     protected function getPackageAliases($app)
     {
         return [
-            'DBCart' => Hassansin\DBCart\Facades\Cart::class
+            'DBCart' => zuhaili92\DBCart\Facades\Cart::class
         ];
     }
 
@@ -409,7 +409,7 @@ class CartTest extends Orchestra\Testbench\TestCase
         ]);
         $cart->expire();
 
-        $cmd = new Hassansin\DBCart\Console\Commands\CartCleanup();
+        $cmd = new zuhaili92\DBCart\Console\Commands\CartCleanup();
         DB::enableQueryLog();
         $cmd->handle();
         $this->assertCount(4, DB::getQueryLog());

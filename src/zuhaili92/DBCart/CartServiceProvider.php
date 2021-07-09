@@ -1,6 +1,6 @@
 <?php
 
-namespace Hassansin\DBCart;
+namespace zuhaili92\DBCart;
 
 use Illuminate\Support\ServiceProvider;
 
