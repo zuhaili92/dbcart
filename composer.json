@@ -20,7 +20,7 @@
         "orchestra/testbench": "~3.0"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "zuhaili92\\DBCart": "src/"
         }
     },
