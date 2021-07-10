@@ -24,12 +24,5 @@
             "zuhaili92\\DBCart\\": "src/"
         }
     },
-    "minimum-stability": "dev",
-    "extra":{
-      "laravel":{
-         "providers":[
-            "src\\zuhaili92\\DBCart\\CartServiceProvider"
-         ]
-      }
-   }
+    "minimum-stability": "dev"
 }
