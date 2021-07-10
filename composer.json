@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "zuhaili92\\DBCart\\": "src/DBCart"
+            "zuhaili92\\DBCart\\": "src/"
         }
     },
     "minimum-stability": "dev",
